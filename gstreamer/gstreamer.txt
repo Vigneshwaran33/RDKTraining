@@ -1,0 +1,7 @@
+gcc test.c -o test `pkg-config --cflags --libs gstreamer-1.0` -lcurses
+
+gst-launch-1.0 filesrc location=/home/vicky/Desktop/haikyuu.mp4 ! qtdemux name=demux \
+    demux. ! queue ! h264parse ! avdec_h264 ! videoconvert ! autovideosink \
+    demux. ! queue ! aacparse ! faad ! audioconvert ! autoaudiosink
+
+https://gstreamer.freedesktop.org/documentation/plugins_doc.html?gi-language=c

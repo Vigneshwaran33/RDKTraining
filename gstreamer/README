@@ -1,0 +1,19 @@
+GStreamer is a  open-source multimedia framework that provides a pipeline-based system for handling multimedia streams such as audio, video.
+
+Summary:
+
+Header Includes: The program includes necessary header files such as gst/gst.h, curses.h, pthread.h, and stdio.h for GStreamer functionality, terminal input/output, threading, and standard I/O operations.
+
+CustomData Struct: Defines a CustomData struct containing pointers to various GStreamer elements, along with other variables like terminate and playback_speed.
+
+User Input Thread: Implements a thread (user_input_thread) for handling user input. It listens for keyboard commands ('n', 'p', 's', '+', '-') to control playback state and speed.
+
+send_seek_event Function: Defines a function send_seek_event to send seek events to adjust playback speed based on user input.
+
+Main Function: Initializes GStreamer, creates pipeline elements, builds the pipeline, sets the file location to play, connects signals, links elements, and starts playing the pipeline.
+
+Pad Added Handler: Implements a function pad_added_handler to handle the pad-added signal, determining whether it's an audio or video pad and linking it accordingly to the appropriate queue element.
+
+Bus Listening Loop: Listens to the bus for messages, parsing them to handle errors, end-of-stream, and state changes in the pipeline.
+
+Resource Cleanup: Frees resources such as the bus, sets the pipeline state to NULL, waits for the input thread to terminate, and cleans up GStreamer objects before exiting.

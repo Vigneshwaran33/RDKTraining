@@ -1,0 +1,13 @@
+precondition = ["Platform"]
+autostart = "false"
+startuporder = "@PLUGIN_GSTPLAYERCI_STARTUPORDER@"
+configuration = JSON()
+
+rootobject = JSON()
+rootobject.add("mode", "@PLUGIN_GSTPLAYERCI_MODE@")
+configuration.add("root", rootobject)
+configuration.add("clientidentifier", "wayland-GstPlayerCi")
+
+
+
+

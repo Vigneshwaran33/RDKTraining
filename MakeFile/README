@@ -1,0 +1,14 @@
+MakeFile
+
+A Makefile  contains instructions on how to compile and build a software project.It tell the 'make' utility how to build the project
+
+Target:
+The target main depends on main.o and lib_calc.a. It specifies the command to compile main.o and link it with lib_calc.a to generate the executable main.
+
+Static library creation:
+The rule for lib_calc.a specifies that it is created from arithmetic.o and relational.o using the ar command. This creates a static library lib_calc.a containing the object file.
+
+Compilation Rules:
+Rules for compiling individual source files (main.c, arithmetic.c, relational.c) into object files (main.o, arithmetic.o, relational.o) are defined
+
+

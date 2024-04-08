@@ -1,0 +1,5 @@
+Inprocess:
+Loads in wpeframework process space
+shares same memory
+
+./run.do_compile or bitbake -c compile rdkservices

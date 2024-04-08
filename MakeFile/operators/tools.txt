@@ -1,0 +1,30 @@
+#nm
+nm (name list) is primarily used for displaying symbol tables of object files, shared libraries, and executables.
+
+-a :Display all symbol table entries, including debugging symbols.
+-u :undefined symbols
+
+type
+uppercase-global(external-linkage)
+lowercase-(Internal linkage)
+
+U: Undefined reference (external symbol)
+T: Text (executable code)
+D: Initialized data
+B: Uninitialized data (BSS section)
+r: Read-only data
+t: Text (executable code)
+
+#objdump
+ provides detailed information about object files, including disassembly of executable sections.
+
+-d :disassemble(shows assembly code)
+-x :shows all header
+
+#readelf
+provides information about ELF (Executable and Linkable Format) files, including headers, sections, and dynamic linking information.
+
+-a :all
+-h :header
+-S :section
+

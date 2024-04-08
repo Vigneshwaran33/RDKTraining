@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/rdkcentral/rdkservices/main/Tools/json_generator/schemas/plugin.schema.json",
+    "info": {
+      "title": "UserInfo Plugin",
+      "callsign": "org.rdk.UserInfo",
+      "locator": "libWPEFrameworkUserInfo.so",
+      "status": "production",
+      "description": "The `UserInfo` plugin is used to set and get the username"
+    },
+    "interface": {
+      "$ref": "UserInfo.json#"
+    }
+}

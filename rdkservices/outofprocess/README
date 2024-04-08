@@ -1,0 +1,26 @@
+out-of-process
+run in separate process
+communicate with framework through RPC
+
+1)wpeframework-interfaces
+
+In wpeframework-interfaces
+create IGstPlayer.h,GstPlayer.json and add id in Ids.h
+
+bitbake -c configure -f wpeframework-interfaces
+
+bitbake -f wpeframework-interfaces
+after this IGstPlayer will be in image 
+to bring it in rdkservices recipes-sysroot - bitbake -c configure -f rdkservices
+
+2)rdkservices
+
+clone a plugin and make changes and add it to rdkservices CMakeLists.txt
+
+bitbake -c configure -f rdkservices
+
+bitbake rdkservices
+
+verify .so in images
+
+bitbake fullimage

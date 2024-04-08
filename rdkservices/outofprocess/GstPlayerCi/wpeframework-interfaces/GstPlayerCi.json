@@ -1,0 +1,93 @@
+{
+    "$schema": "interface.schema.json",
+    "jsonrpc": "2.0",
+    "info": {
+      "title": "GstPlayerCi API",
+      "class": "GstPlayerCi",
+      "description": "GstPlayerCi JSON-RPC interface"
+    },
+    "common": {
+      "$ref": "common.json"
+    },
+    "methods": {
+      "initialize": {
+        "summary": "initialize",
+        "description": "keylistener",
+        "result": {
+          "type": "number"
+        },
+        "errors": [
+        ]
+       },
+       "deinitialize": {
+        "summary": "deinitialize",
+        "description": "stops the keylistener",
+        "params": {
+          "$ref": "#/common/results/void"
+        },
+        "result": {
+          "type": "number"
+        },
+        "errors": [
+        ]
+       },
+      "setfile": {
+        "summary": "Sets the file to play",
+        "params":{
+          "type":"object",
+          "properties":
+          {
+            "url":
+            {
+              "type":"string"
+            }
+          }
+        },
+        "result": {
+          "type":"boolean"
+        },
+        "errors": [
+        ]
+      },
+      "play": {
+        "summary": "Plays the file",
+        "result": {
+          "type":"boolean"
+        },
+        "errors": [
+        ]
+      },
+      "pause": {
+        "summary": "Pauses the playback",
+        "result": {
+          "type":"boolean"
+        },
+        "errors": [
+        ]
+      },
+      "FastForward": {
+        "summary": "FastForwards the playback",
+        "result": {
+          "type":"boolean"
+        },
+        "errors": [
+        ]
+      },
+      "loop": {
+        "summary": "Loops the playback",
+        "result": {
+          "type":"boolean"
+        },
+        "errors": [
+        ]
+      },
+      "exit": {
+        "summary": "Exits the player",
+        "result": {
+          "type":"boolean"
+        },
+        "errors": [
+        ]
+      }
+    }
+  }
