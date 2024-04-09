@@ -1,0 +1,20 @@
+diff --git a/recipes-extended/rdkservices/rdkservices_git.bb b/recipes-extended/rdkservices/rdkservices_git.bb
+index d6856fc..2ee53bb 100644
+--- a/recipes-extended/rdkservices/rdkservices_git.bb
++++ b/recipes-extended/rdkservices/rdkservices_git.bb
+@@ -180,6 +180,7 @@ PACKAGECONFIG[performancemetrics]   = "-DPLUGIN_PERFORMANCEMETRICS=ON \
+                                        -DPLUGIN_PERFORMANCEMETRICS_LOGGER_IMPLEMENTATION=SYSLOG \
+                                        -DPLUGIN_PERFORMANCEMETRICS_WEBKITBROWSER_CLASSNAME=ON \
+                                        ,-DPLUGIN_PERFORMANCEMETRICS=OFF,"
++
+ # ----------------------------------------------------------------------------
+ 
+ MONITOR_PLUGIN_ARGS                ?= " \
+@@ -190,7 +191,6 @@ MONITOR_PLUGIN_ARGS                ?= " \
+                                        -DPLUGIN_MONITOR_SEARCH_AND_DISCOVERY_MEMORYLIMIT=888832 \
+                                        -DPLUGIN_MONITOR_NETFLIX_APP_MEMORYLIMIT=1048576 \
+ "
+-
+ EXTRA_OECMAKE += " \
+     -DPYTHON_EXECUTABLE=${STAGING_BINDIR_NATIVE}/python3-native/python3 \
+     -DBUILD_REFERENCE=${SRCREV} \

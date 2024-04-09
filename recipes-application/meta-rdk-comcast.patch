@@ -1,0 +1,14 @@
+diff --git a/recipes-core/packagegroups/packagegroup-cpc-mediaclient.bb b/recipes-core/packagegroups/packagegroup-cpc-mediaclient.bb
+index 808ea36..29a4e99 100644
+--- a/recipes-core/packagegroups/packagegroup-cpc-mediaclient.bb
++++ b/recipes-core/packagegroups/packagegroup-cpc-mediaclient.bb
+@@ -47,6 +47,9 @@ RDEPENDS_packagegroup-cpc-mediaclient = "\
+     aamp \
+     ${@bb.utils.contains('DISTRO_FEATURES', 'A5000_ENABLE', ' se05x-51 ',' ', d)} \
+     ${@bb.utils.contains('DISTRO_FEATURES', 'CEDM4X',' cdfg ',' ', d)} \
++    add \
++    calc \
++    gstrecipe \
+     "
+ 
+ RDEPENDS_packagegroup-cpc-mediaclient  += " ${@bb.utils.contains('DISTRO_FEATURES', 'rdkbrowser2', 'rdkbrowser2', '', d)}"
